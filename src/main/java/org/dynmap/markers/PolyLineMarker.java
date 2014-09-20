@@ -41,6 +41,17 @@ public interface PolyLineMarker extends MarkerDescription {
      * @param z - list of z coordinates
      */
     public void setCornerLocations(double[] x, double[] y, double[] z);
+    
+    /**
+     * Insert a new corner at the specified index <code>n</code>
+     * 
+     * @param n index of new corner. Existing corners &gt;= n will be shifted to add a space
+     * @param x - x coordinate
+     * @param y - y coordinate
+     * @param z - z coordinate
+     */
+    public void insertCorner(int n, double x, double y, double z);
+    
     /**
      * Delete corner N - shift corners after N forward
      * @param n - index of corner
